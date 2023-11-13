@@ -10,12 +10,27 @@ import SwiftUI
 @main
 struct ToDoListApp: App {
     @StateObject var listViewModel : ListViewModel = ListViewModel()
-        var body: some Scene {
+    @State private var isActive: Bool = false
+    var body: some Scene {
         WindowGroup {
-            NavigationStack{
-                ListView()
+            if isActive {
+                NavigationStack{
+                    
+                    ListView()
+                }
+                .environmentObject(listViewModel)
+
+            }else {
+                SplashScreen()
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                            withAnimation {
+                                self.isActive = true
+                            }
+                        }
+                    }
             }
-            .environmentObject(listViewModel)
         }
+            
     }
 }

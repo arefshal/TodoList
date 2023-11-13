@@ -13,23 +13,29 @@ struct ListView: View {
     @EnvironmentObject var listViewModel: ListViewModel
     
     var body: some View {
-        // Creates a list to display the to-do items.
-        List {
-            // Iterates over the items in the listViewModel.
-            ForEach(listViewModel.items) { item in
-                // Represents a single row in the list.
-                ListRowView(item: item)
-                    // Adds a tap gesture to each row for updating item completion status.
-                    .onTapGesture {
-                        withAnimation(.linear) {
-                            listViewModel.updateItem(item: item)
-                        }
+        ZStack{
+            if listViewModel.items.isEmpty {
+                Text("No Items")
+            } else{
+                // Creates a list to display the to-do items.
+                List {
+                    // Iterates over the items in the listViewModel.
+                    ForEach(listViewModel.items) { item in
+                        // Represents a single row in the list.
+                        ListRowView(item: item)
+                            // Adds a tap gesture to each row for updating item completion status.
+                            .onTapGesture {
+                                withAnimation(.linear) {
+                                    listViewModel.updateItem(item: item)
+                                }
+                            }
                     }
+                    // Enables swipe-to-delete functionality.
+                    .onDelete(perform: listViewModel.deleteItem)
+                    // Enables drag-and-drop to reorder items.
+                    .onMove(perform: listViewModel.moveItem)
+                }
             }
-            // Enables swipe-to-delete functionality.
-            .onDelete(perform: listViewModel.deleteItem)
-            // Enables drag-and-drop to reorder items.
-            .onMove(perform: listViewModel.moveItem)
         }
         // Applies the plain list style to the list.
         .listStyle(PlainListStyle())

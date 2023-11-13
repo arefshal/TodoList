@@ -17,6 +17,7 @@
 		B00A54372AFF6FAA00275326 /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00A54362AFF6FAA00275326 /* ListRowView.swift */; };
 		B00A54392AFF73D000275326 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00A54382AFF73D000275326 /* AddView.swift */; };
 		B00A543C2AFF774100275326 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00A543B2AFF774100275326 /* ItemModel.swift */; };
+		B017E6632B0203B100490A44 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B017E6622B0203B100490A44 /* SplashScreen.swift */; };
 		B0C5CAAB2B00E41200357626 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C5CAAA2B00E41200357626 /* ListViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		B00A54362AFF6FAA00275326 /* ListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
 		B00A54382AFF73D000275326 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		B00A543B2AFF774100275326 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		B017E6622B0203B100490A44 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		B0C5CAAA2B00E41200357626 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +147,7 @@
 				B00A54342AFF6D6D00275326 /* ListView.swift */,
 				B00A54362AFF6FAA00275326 /* ListRowView.swift */,
 				B00A54382AFF73D000275326 /* AddView.swift */,
+				B017E6622B0203B100490A44 /* SplashScreen.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 			files = (
 				B00A543C2AFF774100275326 /* ItemModel.swift in Sources */,
 				B00A54392AFF73D000275326 /* AddView.swift in Sources */,
+				B017E6632B0203B100490A44 /* SplashScreen.swift in Sources */,
 				B0C5CAAB2B00E41200357626 /* ListViewModel.swift in Sources */,
 				B00A54352AFF6D6D00275326 /* ListView.swift in Sources */,
 				B00A54082AFF6B8400275326 /* ToDoListApp.swift in Sources */,
